@@ -1,0 +1,49 @@
+{
+  "extends": ["standard", "standard-react", "eslint:recommended", "plugin:react/recommended"],
+  "globals": {
+    "google": true,
+    "API_URL": true
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true
+    }
+  },
+  "plugins": ["react"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "space-in-parens": ["error"],
+    "comma-dangle": ["error", "always-multiline"],
+    "space-before-function-paren": [
+      "error",
+      { "anonymous": "never", "named": "never", "asyncArrow": "always" }
+    ],
+    "operator-linebreak": ["error", "after", { "overrides": { "*": "after" } }],
+    "object-shorthand": ["error", "always"],
+    "no-console": ["warn"],
+    "eqeqeq": ["error", "smart"],
+    "no-undef": ["error"],
+    "max-len": [
+      "error",
+      110,
+      { "ignoreTemplateLiterals": true, "ignoreUrls": true, "ignoreStrings": true }
+    ],
+    "object-curly-spacing": ["error", "always"],
+    "react/prop-types": ["error", { "ignore": ["children", "className"] }],
+    "no-return-assign": ["off"],
+    "semi": ["error", "always"],
+    "no-multiple-empty-lines": ["error"]
+  }
+}
